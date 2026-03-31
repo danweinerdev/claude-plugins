@@ -6,7 +6,10 @@
   "plugins": [
     {
       "name": "planner",
-      "source": "https://github.com/danweinerdev/claude-project-planner",
+      "source": {
+        "source": "github",
+        "repo": "danweinerdev/claude-project-planner"
+      },
       "description": "Structured project planning with lifecycle skills, review agents, and an HTML dashboard",
       "license": "MIT",
       "author": {
