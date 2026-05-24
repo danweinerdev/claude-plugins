@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "planner",
+      "name": "sdd-planner",
       "source": {
         "source": "github",
-        "repo": "danweinerdev/claude-project-planner"
+        "repo": "danweinerdev/ai-agentic-sdd-planner"
       },
       "description": "Structured project planning with lifecycle skills, review agents, and an HTML dashboard",
       "license": "MIT",
