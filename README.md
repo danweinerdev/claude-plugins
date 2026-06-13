@@ -14,7 +14,8 @@ A plugin marketplace for [Claude Code](https://docs.anthropic.com/en/docs/claude
 
 | Plugin | Description | Author | License |
 |--------|-------------|--------|---------|
-| **planner** | Structured project planning with lifecycle skills, review agents, and an HTML dashboard | Daniel Weiner | MIT |
+| **sdd-planner** | Structured project planning with lifecycle skills, review agents, and an HTML dashboard | Daniel Weiner | MIT |
+| **devtools** | AI developer tooling — automated test generation, TDD workflows, regression hunting, and multi-agent code audits | Daniel Weiner | MIT |
 
 ## Installation
 
@@ -26,10 +27,11 @@ From within a Claude Code session, run:
 /plugin marketplace add danweinerdev/claude-plugins
 ```
 
-### 2. Install the plugin
+### 2. Install a plugin
 
 ```
-/plugin install planner@project-planner
+/plugin install sdd-planner@project-planner
+/plugin install devtools@project-planner
 ```
 
 You can install to a specific scope:

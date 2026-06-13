@@ -16,6 +16,19 @@
         "name": "Daniel Weiner",
         "email": "info@phantomnet.net"
       }
+    },
+    {
+      "name": "devtools",
+      "source": {
+        "source": "github",
+        "repo": "danweinerdev/ai-devtools"
+      },
+      "description": "AI developer tooling — automated test generation, TDD workflows, regression hunting, and multi-agent code audits",
+      "license": "MIT",
+      "author": {
+        "name": "Daniel Weiner",
+        "email": "info@phantomnet.net"
+      }
     }
   ]
 }
