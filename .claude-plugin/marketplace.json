@@ -1,16 +1,17 @@
 {
-  "name": "project-planner",
+  "name": "claude-plugins",
   "owner": {
-    "name": "Daniel Weiner"
+    "name": "Daniel Weiner",
+    "email": "info@phantomnet.net"
   },
   "plugins": [
     {
       "name": "sdd-planner",
       "source": {
         "source": "github",
-        "repo": "danweinerdev/ai-agentic-sdd-planner"
+        "repo": "danweinerdev/claude-sdd-planner"
       },
-      "description": "Structured project planning with lifecycle skills, review agents, and an HTML dashboard",
+      "description": "Spec-driven development planning: lifecycle skills and review agents for structured plans, specs, designs, and research",
       "license": "MIT",
       "author": {
         "name": "Daniel Weiner",
@@ -23,7 +24,20 @@
         "source": "github",
         "repo": "danweinerdev/ai-devtools"
       },
-      "description": "AI developer tooling — automated test generation, TDD workflows, regression hunting, and multi-agent code audits",
+      "description": "AI developer tooling - automated test generation, TDD workflows, regression hunting, and multi-agent code audits",
+      "license": "MIT",
+      "author": {
+        "name": "Daniel Weiner",
+        "email": "info@phantomnet.net"
+      }
+    },
+    {
+      "name": "model-router",
+      "source": {
+        "source": "github",
+        "repo": "danweinerdev/claude-model-router"
+      },
+      "description": "Routes every sub-task to the cheapest capable model tier, escalating only on verified failure; registers other plugins' agents via a configurable registry",
       "license": "MIT",
       "author": {
         "name": "Daniel Weiner",

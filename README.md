@@ -1,6 +1,6 @@
 # Claude Plugins Marketplace
 
-A plugin marketplace for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) providing structured project planning tools.
+A plugin marketplace for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) providing spec-driven planning, developer tooling, and cost-aware model routing.
 
 ## Table of Contents
 
@@ -14,8 +14,9 @@ A plugin marketplace for [Claude Code](https://docs.anthropic.com/en/docs/claude
 
 | Plugin | Description | Author | License |
 |--------|-------------|--------|---------|
-| **sdd-planner** | Structured project planning with lifecycle skills, review agents, and an HTML dashboard | Daniel Weiner | MIT |
-| **devtools** | AI developer tooling — automated test generation, TDD workflows, regression hunting, and multi-agent code audits | Daniel Weiner | MIT |
+| **sdd-planner** | Spec-driven development planning: lifecycle skills and review agents for structured plans, specs, designs, and research | Daniel Weiner | MIT |
+| **devtools** | AI developer tooling - automated test generation, TDD workflows, regression hunting, and multi-agent code audits | Daniel Weiner | MIT |
+| **model-router** | Routes every sub-task to the cheapest capable model tier, escalating only on verified failure; registers other plugins' agents via a configurable registry | Daniel Weiner | MIT |
 
 ## Installation
 
@@ -30,15 +31,20 @@ From within a Claude Code session, run:
 ### 2. Install a plugin
 
 ```
-/plugin install sdd-planner@project-planner
-/plugin install devtools@project-planner
+/plugin install sdd-planner@claude-plugins
+/plugin install devtools@claude-plugins
+/plugin install model-router@claude-plugins
 ```
+
+The plugins are independent, but `model-router` is built to cooperate with the
+others: install it alongside `sdd-planner` and run
+`/model-router:profiles enable sdd-planner` to route planning work by tier.
 
 You can install to a specific scope:
 
-- **User** (default) — available in all projects
-- **Project** — available to anyone working in the current project
-- **Local** — only available to you in the current project
+- **User** (default) - available in all projects
+- **Project** - available to anyone working in the current project
+- **Local** - only available to you in the current project
 
 ### 3. Reload plugins
 
@@ -54,7 +60,7 @@ To enable auto-update so the marketplace and its plugins stay current automatica
 
 1. Run `/plugin`
 2. Select the **Marketplaces** tab
-3. Choose **project-planner** and select **Enable auto-update**
+3. Choose **claude-plugins** and select **Enable auto-update**
 
 Once enabled, Claude Code will check for updates at startup and pull the latest versions automatically.
 
@@ -78,7 +84,7 @@ export FORCE_AUTOUPDATE_PLUGINS=true
 To manually refresh the marketplace listings at any time:
 
 ```
-/plugin marketplace update project-planner
+/plugin marketplace update claude-plugins
 ```
 
 ## License
